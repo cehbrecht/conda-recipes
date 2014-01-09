@@ -1,0 +1,21 @@
+package:
+  name: jasper
+  version: 1.900.1
+
+source:
+  fn: jasper-1.900.1.zip
+  url:  http://zipper.jpl.nasa.gov/dist/easy-rcmet/jasper-1.900.1.zip
+  md5: a342b2b4495b3e1394e161eb5d85d754
+
+build:
+  number: 0            [linux]
+
+requirements:
+  build:
+    - jpeg
+  run:
+    - jpeg
+
+about:
+  home: http://www.ece.uvic.ca/~frodo/jasper/
+  license: Copyright (c) 2001-2006 Michael David Adams (http://www.ece.uvic.ca/~frodo/jasper/LICENSE)

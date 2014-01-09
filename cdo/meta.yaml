@@ -1,0 +1,30 @@
+package:
+  name: cdo
+  version: 1.6.2
+
+source:
+  fn: cdo-1.6.2.tar.gz
+  url: https://code.zmaw.de/attachments/download/6764/cdo-1.6.2.tar.gz
+  md5: a17b23e09a2cae95504bfb2a4338e632
+
+build:
+  number: 1            [linux]
+
+requirements:
+  build:
+    - jasper
+    - grib_api
+    - libnetcdf
+    - proj4
+  run:
+    - grib_api
+    - libnetcdf
+    - proj4
+
+test:
+  commands:
+    - cdo -h
+
+about:
+  home: https://software.ecmwf.int/wiki/display/GRIB/Home
+  license: Apache License v2.0 (http://www.apache.org/licenses/)
