@@ -26,5 +26,5 @@ test:
     - cdo -h
 
 about:
-  home: https://software.ecmwf.int/wiki/display/GRIB/Home
-  license: Apache License v2.0 (http://www.apache.org/licenses/)
+  home: https://code.zmaw.de/projects/cdo
+  license: GNU General Public License v2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
