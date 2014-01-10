@@ -8,7 +8,7 @@ source:
   md5: d815838c92a29179298c126effbb1537
 
 build:
-  number: 0            [linux]
+  number: 1            [linux]
 
 about:
   home: http://trac.osgeo.org/proj/

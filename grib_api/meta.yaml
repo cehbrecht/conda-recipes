@@ -15,7 +15,7 @@ requirements:
     - libnetcdf
 
 build:
-  number: 0            [linux]
+  number: 1            [linux]
 
 about:
   home: https://software.ecmwf.int/wiki/display/GRIB/Home
