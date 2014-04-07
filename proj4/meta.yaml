@@ -5,11 +5,12 @@ package:
 source:
   fn: proj-4.8.0.tar.gz
   url: http://download.osgeo.org/proj/proj-4.8.0.tar.gz
-  md5: d815838c92a29179298c126effbb1537
 
 build:
-  number: 1            [linux]
+  number: 0
 
 about:
   home: http://trac.osgeo.org/proj/
-  license: MIT-license (http://trac.osgeo.org/proj/wiki/WikiStart#License)
+  license: MIT
+
+# vim:set ts=8 sw=2 sts=2 tw=78 et:
