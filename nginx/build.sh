@@ -33,7 +33,7 @@ LinuxInstallation() {
     chmod +x configure;
 
     ./configure \
-        --with-pcre \
+        --with-pcre-jit \
         --with-http_ssl_module \
         --http-client-body-temp-path=etc/nginx/client \
         --http-proxy-temp-path=etc/nginx/proxy \
@@ -46,7 +46,7 @@ LinuxInstallation() {
         --error-log-path=var/log/nginx/error.log \
         --pid-path=etc/nginx/nginx.pid \
         --prefix="${PREFIX}" || return 1;
-    make || return 1;
+    make -j || return 1;
     make install || return 1;
 
     return 0;

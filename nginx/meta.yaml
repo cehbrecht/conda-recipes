@@ -1,11 +1,11 @@
 
 package:
     name: nginx
-    version: 1.4.3
+    version: 1.4.6
 
 source:
-    fn: nginx-1.4.3.tar.gz
-    url: http://nginx.org/download/nginx-1.4.3.tar.gz
+    fn: nginx-1.4.6.tar.gz
+    url: http://nginx.org/download/nginx-1.4.6.tar.gz
     #md5:
 
 build:
@@ -13,10 +13,12 @@ build:
 
 requirements:
     build:
+        - pcre
         - openssl
         - zlib
 
     run:
+        - pcre 
         - openssl
         - zlib
 
