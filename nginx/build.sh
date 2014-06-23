@@ -33,6 +33,8 @@ LinuxInstallation() {
     chmod +x configure;
 
     ./configure \
+	--with-ld-opt="-L ${PREFIX}/lib" \
+   	--with-cc-opt="-I ${PREFIX}/include" \
         --with-pcre-jit \
         --with-http_ssl_module \
         --http-client-body-temp-path=etc/nginx/client \
