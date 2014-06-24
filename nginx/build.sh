@@ -10,6 +10,7 @@ export LDFLAGS="-L${PREFIX}/lib"
 mkdir -vp ${PREFIX}/bin || exit 1;
 mkdir -vp ${PREFIX}/var/log/nginx || exit 1;
 touch ${PREFIX}/var/log/nginx/{access,error}.log || exit 1;
+mkdir -vp ${PREFIX}/var/cache/nginx || exit 1;
 
 cat > ${PREFIX}/bin/nginx <<EOF
 #!/bin/bash
