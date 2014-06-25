@@ -36,7 +36,7 @@ LinuxInstallation() {
     ./configure \
 	--with-ld-opt="-L ${PREFIX}/lib" \
    	--with-cc-opt="-I ${PREFIX}/include" \
-        --with-pcre-jit \
+        --with-pcre \
         --with-http_ssl_module \
         --http-client-body-temp-path=etc/nginx/client \
         --http-proxy-temp-path=etc/nginx/proxy \
