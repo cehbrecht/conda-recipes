@@ -4,10 +4,16 @@
 # - java-1.7.0-openjdk-devel
 # - appropriately setup JAVA_HOME variable in system
 
-mkdir -vp ${PREFIX}/opt/restflow;
+mkdir -vp ${PREFIX}/bin;
+mkdir -vp ${PREFIX}/share/java;
 
 export JAVA_HOME="/usr/lib/jvm/default-java"
 
-mv restflow-1.0b01-with-dependencies.jar ${PREFIX}/opt/restflow/restflow-1.0b01-with-dependencies.jar
+mv restflow.jar ${PREFIX}/share/java/restflow.jar
 
+cat <<EOF > ${PREFIX}/bin/restflow
+#!/bin/sh
+/usr/bin/java -jar ${PREFIX}/share/java/restflow.jar $*
+EOF
+chmod a+x ${PREFIX}/bin/restflow
 
