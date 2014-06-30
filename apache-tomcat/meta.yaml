@@ -17,7 +17,8 @@ requirements:
     run:
 
 test:
-    - catalina.sh version
+    commands:
+        - catalina.sh version
 
 about:
     home: http://tomcat.apache.org/
