@@ -1,0 +1,25 @@
+
+package:
+    name: restflow
+    version: 1.0b01
+
+source:
+    fn: restflow-1.0b01-with-dependencies.jar
+    url: http://restflow.org/restflow/downloads/restflow-1.0b01-with-dependencies.jar
+    md5: 024ce6fdf632f68dc8014091ed4f10ef
+
+build:
+    number: 0
+
+requirements:
+    build:
+
+    run:
+
+test:
+   commands:
+
+about:
+    home: https://github.com/restflow-org/restflow/wiki
+    license: MIT License
+
