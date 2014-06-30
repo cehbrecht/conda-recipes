@@ -13,7 +13,7 @@ mv restflow.jar ${PREFIX}/share/java/restflow.jar
 
 cat <<EOF > ${PREFIX}/bin/restflow
 #!/bin/sh
-/usr/bin/java -jar ${PREFIX}/share/java/restflow.jar $*
+/usr/bin/java -jar ${PREFIX}/share/java/restflow.jar \$*
 EOF
 chmod a+x ${PREFIX}/bin/restflow
 

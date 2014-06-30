@@ -18,6 +18,7 @@ requirements:
 
 test:
    commands:
+       - restflow -h
 
 about:
     home: https://github.com/restflow-org/restflow/wiki
