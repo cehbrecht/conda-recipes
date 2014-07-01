@@ -17,12 +17,14 @@ requirements:
         - htmltmpl
         - lxml
         - ordereddict
+        - python-magic
 
     run:
         - python
         - htmltmpl
         - lxml
         - ordereddict
+        - python-magic
 
 test:
     imports:
