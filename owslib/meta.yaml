@@ -1,0 +1,37 @@
+
+package:
+    name: owslib
+    version: 0.8.7
+
+source:
+    fn: OWSLib-0.8.7.tar.gz
+    url: https://pypi.python.org/packages/source/O/OWSLib/OWSLib-0.8.7.tar.gz
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - setuptools
+        - pytz
+        - dateutil
+        - lxml
+
+    run:
+        - python
+        - pytz
+        - dateutil
+        - lxml
+
+test:
+    imports:
+        - owslib
+
+    #commands:
+    #    -
+
+about:
+    home: http://geopython.github.io/OWSLib/
+    license: BSD
+
