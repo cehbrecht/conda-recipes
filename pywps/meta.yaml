@@ -1,0 +1,37 @@
+
+package:
+    name: pywps
+    version: 3.2dev
+
+source:
+    git_url: https://github.com/cehbrecht/PyWPS.git
+    git_tag: master
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - setuptools
+        - htmltmpl
+        - lxml
+        - ordereddict
+
+    run:
+        - python
+        - htmltmpl
+        - lxml
+        - ordereddict
+
+test:
+    imports:
+        - pywps
+
+    #commands:
+    #    -
+
+about:
+    home: https://github.com/geopython/PyWPS
+    license: GPLv2
+
