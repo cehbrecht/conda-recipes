@@ -1,0 +1,60 @@
+
+package:
+    name: malleefowl
+    version: 0.1dev
+
+source:
+    git_url: git://redmine.dkrz.de/malleefowl.git
+    git_tag: homebrew
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - setuptools
+        - pywps
+        - owslib
+        - dateutil
+        - lxml
+        - netcdf4
+        - pyyaml
+        - yaml
+        - pymongo
+        - pyopenssl
+        - restflow
+        - concurrentloghandler
+        - ipython
+        - nose
+        - gunicorn
+
+    run:
+        - python
+        - setuptools
+        - pywps
+        - owslib
+        - dateutil
+        - lxml
+        - netcdf4
+        - pyyaml
+        - yaml
+        - pymongo
+        - pyopenssl
+        - restflow
+        - concurrentloghandler
+        - ipython
+        - nose
+        - gunicorn
+
+test:
+    imports:
+        - malleefowl
+
+    #commands:
+    #    -
+
+about:
+    home: https://mouflon.dkrz.de/help
+    license: Apache License v2.0
+
