@@ -25,9 +25,11 @@ requirements:
   build:
     - python
     - setuptools
+    - cdo
 
   run:
     - python
+    - cdo
 
 test:
   # Python imports
