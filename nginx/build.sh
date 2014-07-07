@@ -11,6 +11,7 @@ mkdir -vp ${PREFIX}/bin || exit 1;
 mkdir -vp ${PREFIX}/var/log/nginx || exit 1;
 touch ${PREFIX}/var/log/nginx/{access,error}.log || exit 1;
 mkdir -vp ${PREFIX}/var/cache/nginx || exit 1;
+mkdir -vp ${PREFIX}/var/run || exit 1;
 
 cat > ${PREFIX}/bin/nginx <<EOF
 #!/bin/bash
@@ -45,9 +46,9 @@ LinuxInstallation() {
         --http-uwsgi-temp-path=etc/nginx/uwsgi \
         --http-log-path=var/log/nginx/access.log \
         --conf-path=etc/nginx/nginx.conf \
-        --lock-path=etc/nginx/nginx.lock \
+        --lock-path=var/run/nginx.lock \
         --error-log-path=var/log/nginx/error.log \
-        --pid-path=etc/nginx/nginx.pid \
+        --pid-path=var/run/nginx.pid \
         --prefix="${PREFIX}" || return 1;
     make -j || return 1;
     make install || return 1;
