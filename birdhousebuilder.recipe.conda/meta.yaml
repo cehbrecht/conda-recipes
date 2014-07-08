@@ -1,0 +1,33 @@
+
+package:
+    name: birdhousebuilder.recipe.conda
+    version: 0.1dev
+
+source:
+    git_url: git://redmine.dkrz.de/birdhousebuilder.recipe.conda.git
+    git_tag: master
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - setuptools
+        - zc.buildout
+    run:
+        - python
+        - setuptools
+        - zc.buildout
+
+test:
+    imports:
+        - birdhousebuilder.recipe.conda
+
+    #commands:
+    #    -
+
+about:
+    home: https://mouflon.dkrz.de/help
+    license: Apache License v2.0
+
