@@ -1,11 +1,11 @@
 package:
   name: mako
-  version: !!str 0.9.1
+  version: !!str 1.0.0
 
 source:
-  fn: Mako-0.9.1.tar.gz
-  url: https://pypi.python.org/packages/source/M/Mako/Mako-0.9.1.tar.gz
-  md5: fe3f394ef714776d09ec6133923736a7
+  fn: Mako-1.0.0.tar.gz
+  url: https://pypi.python.org/packages/source/M/Mako/Mako-1.0.0.tar.gz
+  md5: ae27c6512832fe528bb67f1a851921cc
 #  patches:
    # List any patch files here
    # - fix.patch
