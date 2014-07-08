@@ -1,0 +1,37 @@
+
+package:
+    name: birdhousebuilder.recipe.supervisor
+    version: 0.1dev
+
+source:
+    git_url: git://redmine.dkrz.de/birdhousebuilder.recipe.supervisor.git
+    git_tag: master
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - setuptools
+        - zc.buildout
+        - mako
+        - birdhousebuilder.recipe.conda
+    run:
+        - python
+        - setuptools
+        - zc.buildout
+        - mako
+        - birdhousebuilder.recipe.conda
+
+test:
+    imports:
+        - birdhousebuilder.recipe.supervisor
+
+    #commands:
+    #    -
+
+about:
+    home: https://mouflon.dkrz.de/help
+    license: Apache License v2.0
+
