@@ -1,15 +1,18 @@
 
 package:
     name: owslib
-    version: 0.8.8
+    version: 0.8.8dev
 
 source:
-    fn: OWSLib-0.8.8.tar.gz
-    url: https://pypi.python.org/packages/source/O/OWSLib/OWSLib-0.8.8.tar.gz
-    md5: 09c74461605f18d0381080ab0ecb20cd
+    git_url: https://github.com/geopython/OWSLib.git
+    git_tag: master
+
+    #fn: OWSLib-0.8.8.tar.gz
+    #url: https://pypi.python.org/packages/source/O/OWSLib/OWSLib-0.8.8.tar.gz
+    #md5: 09c74461605f18d0381080ab0ecb20cd
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
