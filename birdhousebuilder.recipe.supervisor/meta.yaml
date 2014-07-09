@@ -1,11 +1,12 @@
 
 package:
     name: birdhousebuilder.recipe.supervisor
-    version: 0.1dev
+    version: 0.0.3
 
 source:
-    git_url: git://redmine.dkrz.de/birdhousebuilder.recipe.supervisor.git
-    git_tag: master
+    fn: birdhousebuilder.recipe.supervisor-0.0.3.tar.gz
+    url: https://testpypi.python.org/packages/source/b/birdhousebuilder.recipe.supervisor/birdhousebuilder.recipe.supervisor-0.0.3.tar.gz
+    md5: 3b8af86099ab56ef107d6201ac5f1bf7 
 
 build:
     number: 0
