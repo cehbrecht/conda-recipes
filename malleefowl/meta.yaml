@@ -8,7 +8,7 @@ source:
     git_tag: homebrew
 
 build:
-    number: 0
+    number: 1 
 
 requirements:
     build:
@@ -27,7 +27,6 @@ requirements:
         - concurrentloghandler
         - ipython
         - nose
-        - gunicorn
 
     run:
         - python
@@ -45,7 +44,6 @@ requirements:
         - concurrentloghandler
         - ipython
         - nose
-        - gunicorn
 
 test:
     imports:
