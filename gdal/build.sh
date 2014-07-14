@@ -1,7 +1,18 @@
 #!/bin/bash
 
-bash configure --with-python --prefix=$PREFIX
+./configure --with-python --prefix=$PREFIX \
+--with-geos=$PREFIX/bin/geos-config \
+--with-static-proj4=$PREFIX \
+--with-hdf5=$PREFIX \
+--with-xerces=$PREFIX \
+--without-pam \
+--with-python \
+--disable-rpath
 make
 make install
 
-rm -rf $PREFIX/share
+# Copy data files 
+mkdir -p $PREFIX/share/gdal/
+cp data/*csv $PREFIX/share/gdal/
+cp data/*wkt $PREFIX/share/gdal/
+

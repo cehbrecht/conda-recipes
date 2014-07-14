@@ -1,24 +1,27 @@
 package:
   name: gdal
-  version: 1.11.0
+  version: "1.11.0"
 
 source:
   fn: gdal-1.11.0.tar.gz
   url: http://download.osgeo.org/gdal/1.11.0/gdal-1.11.0.tar.gz
   md5: 9fdf0f2371a3e9863d83e69951c71ec4
 
-build:
-    number: 0
-
 requirements:
   build:
     - python
-    - libnetcdf
+    - numpy
+    - xerces-c
+    - geos
     - proj4
+    - hdf5 1.8.13
   run:
     - python
-    - libnetcdf
+    - numpy
+    - xerces-c
+    - geos
     - proj4
+    - hdf5 1.8.13
 
 test:
   files:
@@ -34,3 +37,4 @@ test:
 about:
   home: http://www.gdal.org/
   license: MIT
+  summary: The Geospatial Data Abstraction Library (GDAL) Version 1.11.0. Built with all command line tools and with GEOS and HDF5 support.
