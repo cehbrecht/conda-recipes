@@ -15,6 +15,7 @@ requirements:
     - geos
     - proj4
     - hdf5 1.8.13
+    - libpng
   run:
     - python
     - numpy
@@ -22,7 +23,7 @@ requirements:
     - geos
     - proj4
     - hdf5 1.8.13
-
+    - libpng
 test:
   files:
     - os1_hw.py
