@@ -9,15 +9,17 @@ source:
 
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
         - python
         - setuptools
+        - simplejson
 
     run:
         - python
+        - simplejson
 
 test:
     imports:
