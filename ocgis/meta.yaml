@@ -7,7 +7,7 @@ source:
     git_tag: master
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
@@ -27,6 +27,7 @@ requirements:
         - shapely
         - fiona
         - gdal
+        - gdal-data
         - icclim
 
 test:
