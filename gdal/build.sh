@@ -4,9 +4,9 @@
 --with-geos=$PREFIX/bin/geos-config \
 --with-static-proj4=$PREFIX \
 --with-hdf5=$PREFIX \
+--with-netcdf=$PREFIX \
 --with-xerces=$PREFIX \
 --without-pam \
---with-python \
 --disable-rpath
 make
 make install
