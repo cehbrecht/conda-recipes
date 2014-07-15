@@ -29,9 +29,12 @@ requirements:
   build:
     - python
     - setuptools
-
+    - pbr
+    - simplejson
   run:
     - python
+    - pbr
+    - simplejson
 
 test:
   # Python imports
