@@ -60,6 +60,9 @@ case ${MACHINE} in
     'Linux')
         LinuxInstallation || exit 1;
         ;;
+    'Darwin')
+    	LinuxInstallation || exit 1;
+	;;	
     *)
         echo -e "Unsupported machine type: ${MACHINE}";
         exit 1;
