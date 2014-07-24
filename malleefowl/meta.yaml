@@ -5,10 +5,10 @@ package:
 
 source:
     git_url: git://redmine.dkrz.de/malleefowl.git
-    git_tag: homebrew
+    git_tag: pingudev
 
 build:
-    number: 1 
+    number: 2 
 
 requirements:
     build:
