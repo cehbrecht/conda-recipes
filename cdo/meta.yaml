@@ -8,7 +8,7 @@ source:
   md5: a17b23e09a2cae95504bfb2a4338e632
 
 build:
-  number: 2            [linux]
+  number: 2 
 
 requirements:
   build:
