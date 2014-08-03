@@ -24,6 +24,7 @@ requirements:
 
 test:
   commands:
+    # DYLD_LIBRARY_PATH=/Users/pingu/anaconda/lib
     - cdo -h
 
 about:
