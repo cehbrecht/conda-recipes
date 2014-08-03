@@ -6,8 +6,8 @@ export CFLAGS="-O2 -fPIC"
     --enable-shared \
     --enable-python \
     --disable-fortran \
-    --with-jasper=$PREFIX \
-    --with-netcdf=$PREFIX
+    --with-jasper=$PREFIX
+#    --with-netcdf=$PREFIX
 make
 make install
 

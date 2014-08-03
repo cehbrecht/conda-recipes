@@ -12,7 +12,7 @@ requirements:
     - python
     - numpy
     - jasper
-    - libnetcdf
+#    - libnetcdf
 
 build:
   number: 1 
