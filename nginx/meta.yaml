@@ -16,18 +16,13 @@ requirements:
         - pcre
         - openssl
         - zlib
+        - pcre
 
     run:
         - pcre 
         - openssl
         - zlib
-
-test:
-    #imports:
-    #    - nginx
-
-    #commands:
-    #    -
+        - pcre 
 
 about:
     home: http://www.nginx.org
