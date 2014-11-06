@@ -9,17 +9,44 @@ source:
 build:
   number: 2 
 
+build:
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
 requirements:
   build:
+    - readline
     - tk
-    - libpng
+    - zlib
+    - gmp
+    - gsl
+    - cairo     [linux]
+    - freeglut  [linux]
+    - freetype
     - jpeg
-    - cairo
+    - libpng
+    - libtiff
+    - libxml2
+    - libxslt
+    - gcc
+
   run:
+    - readline
     - tk
-    - libpng
+    - zlib
+    - gmp
+    - gsl
+    - cairo     [linux]
+    - freeglut  [linux]
+    - freetype
     - jpeg
-    - cairo
+    - libpng
+    - libtiff
+    - libxml2
+    - libxslt
+    - gcc
+
 test:
   commands:
     - R -h
