@@ -1,15 +1,15 @@
 
 package:
     name: nginx
-    version: 1.6.0
+    version: 1.6.2
 
 source:
-    fn: nginx-1.6.0.tar.gz
-    url: http://nginx.org/download/nginx-1.6.0.tar.gz
-    md5: 8efa354f1c3c2ccf434a50d3fbe82340
+    fn: nginx-1.6.2.tar.gz
+    url: http://nginx.org/download/nginx-1.6.2.tar.gz
+    md5: d1b55031ae6e4bce37f8776b94d8b930
 
 build:
-    number: 2
+    number: 3
 
 requirements:
     build:
