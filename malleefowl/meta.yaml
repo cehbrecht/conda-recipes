@@ -1,53 +1,78 @@
-
 package:
-    name: malleefowl
-    version: 0.1.3
+  name: malleefowl
+  version: !!str 0.1.3
 
 source:
-    git_url: https://github.com/bird-house/malleefowl.git
+  fn: malleefowl-0.1.3.tar.gz
+  url: https://pypi.python.org/packages/source/m/malleefowl/malleefowl-0.1.3.tar.gz
+  md5: b8521b8d08e586f35074967765f5c968
+#  patches:
+   # List any patch files here
+   # - fix.patch
 
 build:
-    number: 0
+  # preserve_egg_dir: True
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - malleefowl = malleefowl:main
+    #
+    # Would create an entry point called malleefowl that calls malleefowl.main()
+
+    - wpsclient=malleefowl.wpsclient:main
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
 
 requirements:
-    build:
-        - python
-        - setuptools
-        - pywps
-        - owslib
-        - dateutil
-        - lxml
-        - netcdf4
-        - pyyaml
-        - yaml
-        - pymongo
-        - pyopenssl
-        - restflow
-        - concurrentloghandler
+  build:
+    - python
+    - setuptools
+    - pywps
+    - htmltmpl
+    - python-magic
+    - ordereddict
+    - lxml
+    - owslib
+    - concurrentloghandler
+    - nose
 
-    run:
-        - python
-        - setuptools
-        - pywps
-        - owslib
-        - dateutil
-        - lxml
-        - netcdf4
-        - pyyaml
-        - yaml
-        - pymongo
-        - pyopenssl
-        - restflow
-        - concurrentloghandler
+  run:
+    - python
+    - pywps
+    - htmltmpl
+    - python-magic
+    - ordereddict
+    - lxml
+    - owslib
+    - concurrentloghandler
+    - nose
 
 test:
-    imports:
-        - malleefowl
+  # Python imports
+  imports:
+    - malleefowl
 
-    #commands:
-    #    -
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - wpsclient --help
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
 
 about:
-    home: https://mouflon.dkrz.de/help
-    license: Apache License v2.0
+  home: https://github.com/bird-house/malleefowl
+  license: Apache License v2.0
+  summary: 'Malleefowl simplifies the usage of WPS and has some supporting WPS processes.'
 
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
