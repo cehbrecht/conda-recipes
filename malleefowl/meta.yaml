@@ -1,14 +1,13 @@
 
 package:
     name: malleefowl
-    version: 0.1dev
+    version: 0.1.3
 
 source:
-    git_url: git://redmine.dkrz.de/malleefowl.git
-    git_tag: pingudev
+    git_url: https://github.com/bird-house/malleefowl.git
 
 build:
-    number: 3 
+    number: 0
 
 requirements:
     build:
@@ -25,8 +24,6 @@ requirements:
         - pyopenssl
         - restflow
         - concurrentloghandler
-        - ipython
-        - nose
 
     run:
         - python
@@ -42,8 +39,6 @@ requirements:
         - pyopenssl
         - restflow
         - concurrentloghandler
-        - ipython
-        - nose
 
 test:
     imports:
