@@ -1,16 +1,17 @@
 package:
   name: httplib2
-  version: 0.8
+  version: !!str 0.9
 
 source:
-  fn: httplib2-0.8.tar.gz
-  url: https://pypi.python.org/packages/source/h/httplib2/httplib2-0.8.tar.gz
-  md5: 94cb8a3b196dfd19253c46609489d9f1
+  fn: httplib2-0.9.tar.gz
+  url: https://pypi.python.org/packages/source/h/httplib2/httplib2-0.9.tar.gz
+  md5: 09d8e8016911fc40e2e4c58f1aa3ec24
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
+# build:
+  # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
@@ -22,7 +23,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 1
+  # number: 1
 
 requirements:
   build:
@@ -52,6 +53,7 @@ test:
 about:
   home: http://code.google.com/p/httplib2/
   license: MIT License
+  summary: 'A comprehensive HTTP client library.'
 
 # See
 # http://docs.continuum.io/conda/build.html for
