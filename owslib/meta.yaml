@@ -1,41 +1,67 @@
-
 package:
-    name: owslib
-    version: 0.8dev
+  name: owslib
+  version: !!str 0.8.10
 
 source:
-    git_url: https://github.com/geopython/OWSLib.git
-    git_tag: master
+  fn: OWSLib-0.8.10.tar.gz
+  url: https://pypi.python.org/packages/source/O/OWSLib/OWSLib-0.8.10.tar.gz
+  md5: bf942298cef015bec19e9ea9e7380248
+#  patches:
+   # List any patch files here
+   # - fix.patch
 
-    #fn: OWSLib-0.8.8.tar.gz
-    #url: https://pypi.python.org/packages/source/O/OWSLib/OWSLib-0.8.8.tar.gz
-    #md5: 09c74461605f18d0381080ab0ecb20cd
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - owslib = owslib:main
+    #
+    # Would create an entry point called owslib that calls owslib.main()
 
-build:
-    number: 3 
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
 
 requirements:
-    build:
-        - python
-        - setuptools
-        - pytz
-        - dateutil
-        - lxml
+  build:
+    - python
+    - setuptools
+    - dateutil >=1.5
+    - pytz
+    - lxml  
 
-    run:
-        - python
-        - pytz
-        - dateutil
-        - lxml
+  run:
+    - python
+    - dateutil >=1.5
+    - pytz
+    - lxml  
 
 test:
-    imports:
-        - owslib
+  # Python imports
+  imports:
+    - owslib
+    - owslib.wps
 
-    #commands:
-    #    -
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
 
 about:
-    home: http://geopython.github.io/OWSLib/
-    license: BSD
+  home: http://geopython.github.io/OWSLib
+  license: BSD License
+  summary: 'OGC Web Service utility library'
 
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
