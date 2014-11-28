@@ -3,14 +3,16 @@ package:
   version: !!str 0.8.10
 
 source:
-  fn: OWSLib-0.8.10.tar.gz
-  url: https://pypi.python.org/packages/source/O/OWSLib/OWSLib-0.8.10.tar.gz
-  md5: bf942298cef015bec19e9ea9e7380248
+  git_url: https://github.com/geopython/OWSLib.git
+  git_tag: master	  
+  #fn: OWSLib-0.8.10.tar.gz
+  #url: https://pypi.python.org/packages/source/O/OWSLib/OWSLib-0.8.10.tar.gz
+  #md5: bf942298cef015bec19e9ea9e7380248
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
@@ -23,7 +25,7 @@ source:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
