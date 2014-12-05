@@ -3,14 +3,16 @@ package:
   version: !!str 0.1.2
 
 source:
-  fn: esgf-pyclient-0.1.2.tar.gz
-  url: https://pypi.python.org/packages/source/e/esgf-pyclient/esgf-pyclient-0.1.2.tar.gz
-  md5: debe38b6baa752a3ebe5215ec79f48e2
+  git_url: https://github.com/cehbrecht/esgf-pyclient.git
+  git_tag: master
+  #fn: esgf-pyclient-0.1.2.tar.gz
+  #url: https://pypi.python.org/packages/source/e/esgf-pyclient/esgf-pyclient-0.1.2.tar.gz
+  #md5: debe38b6baa752a3ebe5215ec79f48e2
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
@@ -23,7 +25,7 @@ source:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
