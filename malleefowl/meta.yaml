@@ -27,7 +27,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 4
+  number: 6
 
 requirements:
   build:
@@ -54,7 +54,10 @@ requirements:
     - ordereddict
     - lxml
     - owslib
-    - wget
+    - pywget
+    - dispel4py
+    - esgf-pyclient
+    - birdhouse-birdy	
     - concurrentloghandler
     - nose
 
