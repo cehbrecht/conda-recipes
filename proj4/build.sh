@@ -1,6 +1,7 @@
 #!/bin/sh
 
-./configure --prefix=$PREFIX --without-jni
+./configure --prefix=$PREFIX
 
 make
+make check
 make install
