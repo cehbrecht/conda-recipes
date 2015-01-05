@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CPPFLAGS="-I$PREFIX/include"
+export CPPFLAGS="-I$PREFIX/include -I$PREFIX/include/libxml2 -I$PREFIX/include/cairo -I$PREFIX/include/freetype2"
 export LDFLAGS="-L$PREFIX/lib"
 
 cd hclasses
