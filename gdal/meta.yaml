@@ -20,6 +20,7 @@ requirements:
     - hdf5
     - libnetcdf
     - libpng
+    - jpeg
   run:
     - python
     - numpy
@@ -29,6 +30,7 @@ requirements:
     - hdf5
     - libnetcdf
     - libpng
+    - jpeg
 test:
   files:
     - os1_hw.py
