@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export CPPFLAGS="-I$PREFIX/include -I$PREFIX/include/libxml2 -I$PREFIX/include/cairo -I$PREFIX/include/freetype2"
-export LDFLAGS="-L$PREFIX/lib"
+export LDFLAGS="-L$PREFIX/lib/"
 
 cd hclasses
 rm  -f *.o
@@ -46,7 +46,7 @@ if [ -f adagucserver ]
 fi
 
 
-test -d ../bin || mkdir ../bin/
-cp adagucserver ../bin/
-cp h5ncdump ../bin/
+#test -d $PREFIX/bin || mkdir $PREFIX/bin/
+cp adagucserver $PREFIX/bin/
+cp h5ncdump $PREFIX/bin/
 echo "[OK] Everything is installed in the ./bin directory"

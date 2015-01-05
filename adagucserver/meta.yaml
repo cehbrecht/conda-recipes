@@ -22,6 +22,8 @@ requirements:
     - postgresql
     - libxml2
     - freetype
+    - curl
+    - jpeg
   run:
     - proj4
     - libnetcdf
@@ -31,9 +33,11 @@ requirements:
     - postgresql
     - libxml2
     - freetype
-test:
-  commands:
-    - adagucserver
+    - curl
+    - jpeg
+#test:
+#  commands:
+#    - adagucserver
 
 about:
   home: http://adaguc.knmi.nl/
