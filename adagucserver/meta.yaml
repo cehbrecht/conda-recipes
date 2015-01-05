@@ -1,0 +1,41 @@
+package:
+  name: adagucserver
+  version: "1.6"
+
+source:
+  fn: adagucserver-1.6.tar.gz
+  url: http://adaguc.knmi.nl/software/adagucserver-1.6.tar.gz
+  patches:
+    - ccd.patch
+    - hclasses.patch
+    - adagucserver.patch
+build:
+  number: 0
+
+requirements:
+  build:
+    - proj4
+    - libnetcdf
+    - udunits
+    - gdal
+    - cairo
+    - postgresql
+    - libxml2
+    - freetype
+  run:
+    - proj4
+    - libnetcdf
+    - udunits
+    - gdal
+    - cairo
+    - postgresql
+    - libxml2
+    - freetype
+test:
+  commands:
+    - adagucserver
+
+about:
+  home: http://adaguc.knmi.nl/
+  license: Apache License 2.0
+  summary: ADAGUC Web Mapping Service (WMS) for NetCDF files used by climate science community.
