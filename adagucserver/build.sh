@@ -3,50 +3,36 @@
 export CPPFLAGS="-I$PREFIX/include -I$PREFIX/include/libxml2 -I$PREFIX/include/cairo -I$PREFIX/include/freetype2"
 export LDFLAGS="-L$PREFIX/lib/"
 
-cd hclasses
-rm  -f *.o
-rm -f *.a
-make -j4
+function clean {
+  rm -f *.o
+  rm -f *.a
+  rm -f adagucserver
+  rm -f h5ncdump
+}
 
-if [ -f hclasses.a ]
-  then
-  echo "[OK] hclasses have succesfully been compiled."
-  else
-    echo "[FAILED] hclasses compilation failed"
-    exit 1;
-  fi
+cd hclasses
+clean
+make -j4
+[ -f hclasses.a ] || exit 1
 
 cd ../CCDFDataModel
-rm -f *.o
-rm -f *.a
+clean
+clean
 make -j4
-
-
-if [ -f CCDFDataModel.a ]
-  then
-  echo "[OK] CCDFDataModel has been succesfully compiled."
-  else
-    echo "[FAILED] CCDFDataModel compilation failed"
-    exit 1;
-  fi
+[ -f CCDFDataModel.a ] || exit 1
   
 cd ../adagucserverEC
-rm -f *.o
-rm -f adagucserver
-rm -f h5ncdump
+clean
 make -j4
+[ -f adagucserver ] || exit 1
 
-
-if [ -f adagucserver ]
-  then
-  echo "[OK] ADAGUC has been succesfully compiled."
-   else
-     echo "[FAILED] ADAGUC compilation failed"
-     exit 1;
-fi
-
-
-#test -d $PREFIX/bin || mkdir $PREFIX/bin/
+# copy executables
 cp adagucserver $PREFIX/bin/
 cp h5ncdump $PREFIX/bin/
-echo "[OK] Everything is installed in the ./bin directory"
+
+# copy data files 
+mkdir -p $PREFIX/share/adagucserver/
+cd ../data
+cp -r fonts $PREFIX/share/adagucserver/
+cp -r XMLTemplates $PREFIX/share/adagucserver/
+
