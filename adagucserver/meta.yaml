@@ -1,6 +1,6 @@
 package:
   name: adagucserver
-  version: "1.6"
+  version: !!str 1.6.0
 
 source:
   fn: adagucserver-1.6.tar.gz
