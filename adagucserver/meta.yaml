@@ -6,8 +6,6 @@ source:
   fn: adagucserver-1.6.tar.gz
   url: http://adaguc.knmi.nl/software/adagucserver-1.6.tar.gz
   patches:
-    - ccd.patch
-    - hclasses.patch
     - adagucserver.patch
 build:
   number: 0
