@@ -1,6 +1,6 @@
 package:
   name: gdal
-  version: !!str patch-1.11.1
+  version: !!str patch_1.11.1
 
 source:
   fn: gdal-1.11.1.tar.gz
