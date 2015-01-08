@@ -1,6 +1,6 @@
 package:
   name: gdal
-  version: "1.11.1"
+  version: !!str patch-1.11.1
 
 source:
   fn: gdal-1.11.1.tar.gz
@@ -10,7 +10,7 @@ source:
     - adaguc.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
