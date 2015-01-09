@@ -37,7 +37,7 @@ test:
         - ocgis
 
     #commands:
-    #    -
+    #    - export GDAL_DATA=${PREFIX}/share/gdal;python -c "import ocgis"
 
 about:
     home: http://ncpp.github.io/ocgis/install.html#installing-openclimategis
